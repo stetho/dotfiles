@@ -21,6 +21,7 @@ alias dot="l."
 alias d="cd ~/Dropbox"
 alias dp="cd ~/Deployment"
 alias p="cd ~/Projects"
+alias dt="cd ~/Desktop"
 alias ws="cd /Library/WebServer/Documents/"
 alias g="git"
 alias v="vim"
@@ -47,8 +48,7 @@ alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
 
-# Flush Directory Service cache
-alias flush="dscacheutil -flushcache"
+alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
 
 # View HTTP traffic
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
